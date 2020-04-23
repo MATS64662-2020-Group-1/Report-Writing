@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 *.aux
 *.log
 *.synctex.gz
 *.fls
 *.fdb_latexmk
 *.pdf
-=======
-.aux .log .synctex.gz .fls .fdb_latexmk .pdf
->>>>>>> b8b3c823ad288ad58c8a8aed62ebae88cd0e3b16
