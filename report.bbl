@@ -21,4 +21,11 @@ Robert Cimrman, Vladimír Lukeš, and Eduard Rohan.
 \newblock Multiscale finite element calculations in python using sfepy.
 \newblock {\em Advances in Computational Mathematics}, 45(4):1897–1921, 2019.
 
+\bibitem{scikitimage}
+St{\'{e}}fan van~der Walt, Johannes~L Sch{\"{o}}nberger, Juan Nunez-Iglesias,
+  Fran{\c{c}}ois Boulogne, Joshua~D Warner, Neil Yager, Emmanuelle Gouillart,
+  Tony Yu, and The scikit-image contributors.
+\newblock {scikit-image: image processing in {P}ython}.
+\newblock {\em PeerJ}, 2:e453, 2014.
+
 \end{thebibliography}
