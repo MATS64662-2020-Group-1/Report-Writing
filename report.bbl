@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{biomedapplication}
+Robert Cimrman and Eduard Rohan.
+\newblock Two-scale modeling of tissue perfusion problem using homogenization
+  of dual porous media.
+\newblock {\em International Journal for Multiscale Computational Engineering -
+  INT J MULTISCALE COMPUT ENG}, 8:81--102, 01 2010.
+
+\bibitem{AcousticTransmission}
+E.~Rohan and V.~Lukeš.
+\newblock Homogenization of the acoustic transmission through a perforated
+  layer.
+\newblock {\em Journal of Computational and Applied Mathematics}, 234(6):1876
+  -- 1885, 2010.
+\newblock Eighth International Conference on Mathematical and Numerical Aspects
+  of Waves (Waves 2007).
+
+\bibitem{FEMinSfePy}
+Robert Cimrman, Vladimír Lukeš, and Eduard Rohan.
+\newblock Multiscale finite element calculations in python using sfepy.
+\newblock {\em Advances in Computational Mathematics}, 45(4):1897–1921, 2019.
+
+\end{thebibliography}
