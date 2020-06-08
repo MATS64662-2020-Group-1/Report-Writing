@@ -6,22 +6,19 @@
 
 \noindent The first test case that was carried out was processing an image of a ferritic microstructure taken from the Materials Science and Engineering: An Introduction by Callister \cite{CallisterJrWilliamD2000MSaE}. Firstly, an understanding of how to navigate and operate the skimage package was developed, as the software was new to the authors, through testing different algorithms and operations independently on the test image. This included manipulating image colour and contrast, converting the image to grayscale and cropping the image to remove the scale bar. Other features that were tested at this stage was the use of filters such as the Sobel filter, which is commonly used in image processing to emphasise the edges in an image, aiding edge detection algorithms. A watershed transform was another image processing technique that was trialled at this stage, where the image is treated as a topographical map, with brightness determining elevation of each point and then identifying the lines which run across the peaks to segment the map. Finally, these operations were combined to process the image as effectively as possible, before the measuring tools were used to estimate average grain size.\\
 
+
 \begin{figure}
 \centering
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{Testcase1_initial}
-  \caption{A subfigure}
-  \label{fig:sub1}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=.4\linewidth]{testcase1}
-  \caption{A subfigure}
-  \label{fig:sub2}
-\end{subfigure}
-\caption{A figure with two subfigures}
-\label{fig:test}
+\parbox{5cm}{
+\includegraphics[width=5cm]{Testcase1_initial}
+\caption{A figure showing the initial microstructure image taken from \cite{CallisterJrWilliamD2000MSaE}.}
+\label{fig:2figsA}}
+\qquad
+\begin{minipage}{6cm}
+\includegraphics[width=6cm]{testcase1}
+\caption{A figure showing the final image after segmentation and processing.}
+\label{fig:2figsB}
+\end{minipage}
 \end{figure}
 
 
