@@ -41,7 +41,20 @@
 \end{figure}
 
 \noindent Test case 3 was then commenced, seeking to apply the algorithm to another image, this time a brightfield image of an $\alpha$ + $\beta$ microstructure of the Ti-6Al-4V alloy, provided by Dr Pratheek Shantraj and shown below. The same procedure as in the previous test case was applied to the image and the image was successfully converted into a segmented, binary image and then exported into the Gmsh software in order to create a square based mesh for subsequent FEM analysis.
-%%%%%%%%%%%%%%%% Images of Ti64 microstructure for test case 3 %%%%%%%%%%
+
+\begin{figure}
+\centering
+\parbox{6cm}{
+\includegraphics[width=6cm]{Ti64_V1.0}
+\caption{A figure showing the initial Ti-64 microstructure image.}
+\label{fig:2figsA}}
+\qquad
+\begin{minipage}{7cm}
+\includegraphics[width=7cm]{testcase 3}
+\caption{A figure showing the final Ti-64 microstructure image after processing.}
+\label{fig:2figsB}
+\end{minipage}
+\end{figure}
 
 \noindent Test case 4 then took the same image from the previous test case and processed and segmented a single grain for meshing and FEM analysis. This analysis was done with the use of the additional skimage sub-packages; threshold filters and clean border segmentation to remove the surrounding grains from the image. The binary, single grain image seen below demonstrates that this approach is valid for application to and isolation of individual grains, as well as a multitude of grains as demonstrated in test case 3. The successful application of the 4 test cases allowed the authors to gain a high level of confidence in the algorithm and therefore move on to the next stage of the project, meshing and FE.
 
