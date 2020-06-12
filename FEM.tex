@@ -5,6 +5,31 @@
 The FEM simulations were run using the Object Oriented Finite (OOF) element analysis project called OOF2, created by the National Institute of Standards and Technology (available here: \url{https://www.ctcms.nist.gov/oof/oof2/}) \cite{OOF2Modelling}. Four test cases were trialed to ensure the simulation was generating results as expected, the simplest case is heat diffusion through a simple shape and the most complex incorporating heat diffusion and displacement in a single grain of Ti-6Al-4V. Once the test cases proved successful, the FEM simulation was run for a larger section of Ti-6Al-4V and the heat diffusion and displacement were determined.
 
 \subsection{Model Validation}
+The first test case is a simple star shape, test cases 2-4 are all Ti-6Al-4V.\\%% Still to add images of initial test case 1-4
+\\
+Each test case input was a binary file, where the black and white regions were specified as separate materials. The thermo-physical properties of the black and white regions were assigned as specified in Table \ref{tab:validation}: Young's Modulus, \textit{E}, Poisson's Ratio, $\nu$, thermal conductivity, $\kappa$, and thermal expansion coefficient, $\alpha$. The microstructure skeleton is created using a 40x40 QuadSkeleton grid, which is annealed, the edges are swapped and the skeleton smoothed to improve the homogeneity index (shown Table 1). The mesh is then generated from the skeleton, with the mapping and interpolation orders remain as 1 to save on computational time. The fields are then defined in accordance to Table 1 on the mesh, constrained in-plane as active (such that the FE output contains the specified parameters). The boundary conditions are set as 0 \degree C on the left edge and 1000 \degree C on the right edge. When the force field is applied, (x,y) is fixed at (0,0). The solver tolerance is set to 1 x10$^-^1^3$ with 1000 iterations and the results are visualised.
+
+\begin{center}
+  \begin{table}[t!]
+  \caption{\label{tab:validation}Physical Properties, Homogeneity Index, Model Fields and Boundary Conditions of Test Cases 1-4}
+
+  \begin{tabular}{|p{1cm}|p{3cm}|p{3cm}|p{2.5cm}|p{2.2cm}|p{2.5cm}|}
+  \hline
+  \centering
+  \textbf{Test Case} &\textbf{Black Region Properties} &\textbf{White Region Properties} &\textbf{Homogeneity Index} &\textbf{Fields} &\textbf{Boundary Conditions}\\
+  \hline
+   1 & E = 300 GPa \newline $\nu$ = 0.33 \newline $\kappa$ = 1000 W/mK \newline $\alpha$ = 5 x10$^-^6$ K$^-^1$ & E = 10 GPa \newline $\nu$ = 0.27 \newline $\kappa$ = 1 W/mK \newline $\alpha$ = 1 K$^-^1$ & 0.992 & Temperature & 0 - 1000 \degree C \\
+   \hline
+   2 & E = 117 GPa \newline $\nu$ = 0.33 \newline $\kappa$ = 390 W/mK \newline $\alpha$ = 51 x10$^-^6$ K$^-^1$ & E = 200 GPa \newline $\nu$ = 0.27 \newline $\kappa$ = 41 W/mK \newline $\alpha$ = 36 K$^-^1$ & 0.996 & Temperature \newline Force & 0 - 1000 \degree C \newline (x,y) fixed at (0,0) \\
+   \hline
+   3 & E = 150 GPa \newline $\nu$ = 0.33 \newline $\kappa$ = 8.5 W/mK \newline $\alpha$ = 10 x10$^-^6$ K$^-^1$ & E = 117 GPa \newline $\nu$ = 0.34 \newline $\kappa$ = 6.7 W/mK \newline $\alpha$ = 8.6 x10$^-^6$ K$^-^1$ & 0.958 & Temperature \newline Force & 0 - 1000 \degree C \newline (x,y) fixed at (0,0) \\
+   \hline
+   4 & E = 40 GPa \newline $\nu$ = 0.33 \newline $\kappa$ = 15 W/mK \newline $\alpha$ = 1 x10$^-^3$ K$^-^1$ & E = 117 GPa \newline $\nu$ = 0.34 \newline $\kappa$ = 6.7 W/mK \newline $\alpha$ = 8.6 x10$^-^6$ K$^-^1$ & 0.995 & Temperature \newline Force & 0 - 1000 \degree C \newline (x,y) fixed at (0,0) \\ 
+   \hline
+  \end{tabular}
+  \end{table}
+\end{center}
+
 
 \subsection{FEM Method}
 
