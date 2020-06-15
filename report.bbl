@@ -33,4 +33,10 @@ William~D {Callister Jr}.
 \newblock {Materials Science and Engineering - An Introduction (5th ed.)}.
 \newblock {\em Anti-Corrosion Methods and Materials}, 47(1), 2000.
 
+\bibitem{OOF2Modelling}
+Andrew Reid, Rhonald Lua, Edwin García, and Valerie Coffman.
+\newblock Modelling microstructures with oof2.
+\newblock {\em International Journal of Materials and Product Technology},
+  35:361--373, 01 2009.
+
 \end{thebibliography}
