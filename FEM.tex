@@ -49,4 +49,29 @@ The results from test case 1 are shown in figure \ref{fig:TestCase1Results} and 
 
 \subsection{FEM of a Globular Ti-6Al-4V Microstructure}
 
+The FEM is used to simulation of heat diffusion through a binary image of a globular Ti-6Al-4V microstructure.\\ %%Insert initial image%%
+\\
+The black (beta) and white (alpha) regions of the microstructure are considered to be separate materials within the simulation. The thermo-physical properties of the alpha and beta regions are assigned as specified in Table \ref{tab:Ti64Properties}. The microstructure skeleton is created using a 40x40 QuadSkeleton grid, which may include tri elements to gain greater accuracy despite the increarsed computational times. The skeleton is annealed, the edges are swapped and the skeleton smoothed to improve the homogeneity index to \\. The mesh is then generated from the skeleton, with the mapping and interpolation orders remain as 1 to save on computational time. The temperature and force fields are then defined on the mesh, constrained in-plane as active (such that the FE output contains the specified parameters). The boundary conditions for the temperature are set as 0 \degree C on the left edge and 1000 \degree C on the right edge. The force field boundary condition is fixed on the left edge, such that there is no (x,y) displacement on the edge. The solver tolerance is set to 1 x10$^-^1^3$ with 1000 iterations and the results are visualised.
+
+\begin{center}
+  \begin{table}[h!]
+  \caption{\label{tab:Ti64Properties}Thermo-physical properties of the Ti-6Al-4V used in the heat diffusion simulation}
+  \begin{center}
+  \begin{tabular}{|p{6cm}|p{3cm}|p{3cm}|}
+  \hline
+  \textbf{Property} &\textbf{Alpha Phase} &\textbf{Beta Phase}\\
+  \hline
+  Young's Modulus, \textit{E} (GPa) & 92.8 & 75.8 \\
+   \hline
+   Poisson Ratio, $\nu$ & 0.35 & 0.31 \\
+   \hline
+   Thermal conductivity, $\kappa$ (W/mK) & 7.6 & 11.3 \\
+   \hline
+   Thermal expansion, $\alpha$ (x10$^-^6$ K$^-^1$) & 8.6 & 11.8 \\
+   \hline  
+  \end{tabular}
+  \end{center}
+  \end{table}
+\end{center}
+
 \end{document}
