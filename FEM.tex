@@ -64,6 +64,17 @@ Test case 3 has a binary image of Ti-6Al-4V with multiple grains as the input fi
     \label{fig:TestCase3Results}
 \end{figure}
 \\
+Test case 4 used a binary input of a Ti-6Al-4V grain which was image processed using the method described in the Image Analysis section. The material properties in this simulation were exaggerated to determine the impact on the results and ensure the model holds true for such cases. The large difference in coefficient of thermal expansion between the black and white regions is clear in the visualisation of the mesh over the contour plots shown in figure \ref{fig:TestCase4Results}. The y-displacement totals 40.6 $\micro$m and the x-displacement totals 20.4 $\micro$m, which is significantly larger than the previous tests. The stress map was added as an output for this test case and the result show the most significant stresses were concentrated on the grain boundaries, particularly at higher temperatures, where stresses reached 2.61 x10$^5$ N/m$^2$.\\
+\\
+The test results have shown that the simulation is able to process binary images with multiple grains to produce contour plots of temperature distribution, displacement along x and y, and stress distribution. This means that the FEM is capable of running the final simulation to gain information about the heat diffusion through a multi-grain Ti-6Al-4V image and the results can be trusted.
+\\
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=15cm]{TestCase4_Simulation_Results.png}
+    \caption{Test case 4 results, showing the a) original microstructure of Ti-6Al-5V b) heat diffusion through the grains c) stress within the grain d) displacement in the x-direction e) displacement in y-direction}
+    \label{fig:TestCase4Results}
+\end{figure}
+\\
 
 \subsection{FEM of a Globular Ti-6Al-4V Microstructure}
 
