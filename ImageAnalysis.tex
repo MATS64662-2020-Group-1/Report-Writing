@@ -4,7 +4,9 @@
 \section{Image Analysis}
 \noindent A key requirement for this project is to build a python script which will allow JPG images to be read as an array, which can then be manipulated and processed with python packages such as Sci-Kit Image (skimage) \cite{scikitimage}. Several microstructure images have been used in this project, from a variety of sources including previous research data, scientific literature and the provided database, all with full and sufficient permissions. Images were then pre-processed accordingly through various techniques such as segmentation, removal of noise and measurement, before being imported into FE simulations to be used to create a mesh. This section will further detail how this process was undertaken and broken down through the use of test cases to ensure that the python script and skimage were performing accurately and as desired.\\
 
-\noindent The first test case that was carried out was processing an image of a ferritic microstructure taken from the Materials Science and Engineering: An Introduction by Callister, as seen in Figure \ref{fig:Testcase1} \cite{CallisterJrWilliamD2000MSaE}. Firstly, an understanding of how to navigate and operate the skimage package was developed, as the software was new to the authors, through testing different algorithms and operations independently on the test image. This included manipulating image colour and contrast, converting the image to grayscale and cropping the image to remove the scale bar. Other features that were tested at this stage was the use of filters such as the Sobel filter, which is commonly used in image processing to emphasise the edges in an image, aiding edge detection algorithms. A watershed transform was another image processing technique that was trialled at this stage, where the image is treated as a topographical map, with brightness determining elevation of each point and then identifying the lines which run across the peaks to segment the map. Finally, these operations were combined to process the image shown in Figure \ref{Testcase1_2} as effectively as possible, before the measuring tools were used to estimate average grain size.\\
+\noindent The first test case that was carried out was processing an image of a ferritic microstructure taken from the Materials Science and Engineering: An Introduction by Callister, as seen in Figure \ref{fig:Testcase1} \cite{CallisterJrWilliamD2000MSaE}.
+Firstly, an understanding of how to navigate and operate the skimage package was developed, as the software was new to the authors, through testing different algorithms and operations independently on the test image. This included manipulating image colour and contrast, converting the image to grayscale and cropping the image to remove the scale bar. Other features that were tested at this stage was the use of filters such as the Sobel filter, which is commonly used in image processing to emphasise the edges in an image, aiding edge detection algorithms.
+A watershed transform was another image processing technique that was trialled at this stage, where the image is treated as a topographical map, with brightness determining elevation of each point and then identifying the lines which run across the peaks to segment the map. Finally, these operations were combined to process the image shown in Figure \ref{fig:Testcase1_2} as effectively as possible, before the measuring tools were used to estimate average grain size.\\
 
 
 \begin{figure}
@@ -17,7 +19,8 @@
   \begin{minipage}[!htb]{.5\textwidth}
     \centering\captionsetup{width=.8\linewidth}%
     \includegraphics[width=0.65\linewidth, height=0.3\textheight]{testcase1}
-    \caption{A figure showing the final image after segmentation and processing.}\label{fig:Testcase1_2}
+    \caption{A figure showing the final image after segmentation and processing.}
+    \label{fig:Testcase1_2}
   \end{minipage}
 %\caption{}\label{fig:1}
 \end{figure}
@@ -44,7 +47,7 @@
 %\caption{}\label{fig:1}
 \end{figure}
 
-\noindent Test case 3 was then commenced, seeking to apply the algorithm to Figure \ref{Ti64initial}, this time a brightfield image of an $\alpha$ + $\beta$ microstructure of the Ti-6Al-4V alloy, provided by Dr Pratheek Shantraj and shown below. The same procedure as in the previous test case was applied to the image and the image was successfully converted into a segmented, binary image shown in Figure \ref{fig:Ti64_2} and then exported into the Gmsh software in order to create a square based mesh for subsequent FEM analysis.\\
+\noindent Test case 3 was then commenced, seeking to apply the algorithm to Figure \ref{fig:Ti64initial}, this time a brightfield image of an $\alpha$ + $\beta$ microstructure of the Ti-6Al-4V alloy, provided by Dr Pratheek Shantraj and shown below. The same procedure as in the previous test case was applied to the image and the image was successfully converted into a segmented, binary image shown in Figure \ref{fig:Ti64_2} and then exported into the Gmsh software in order to create a square based mesh for subsequent FEM analysis.\\
 
 \begin{figure}
   \centering
@@ -61,7 +64,7 @@
 %\caption{}\label{fig:1}
 \end{figure}
 
-\noindent Test case 4 then took the same image from the previous test case and processed and segmented a single grain, shown in Figure \ref{Ti64single} for meshing and FEM analysis. This analysis was done with the use of the additional skimage sub-packages; threshold filters and clean border segmentation to remove the surrounding grains from the image. The binary, single grain image seen below in Figure \ref{fig:Ti64ingle2} demonstrates that this approach is valid for application to and isolation of individual grains, as well as a multitude of grains as demonstrated in test case 3. The successful application of the 4 test cases allowed the authors to gain a high level of confidence in the algorithm and therefore move on to the next stage of the project, meshing and FE.\\
+\noindent Test case 4 then took the same image from the previous test case and processed and segmented a single grain, shown in Figure \ref{fig:Ti64single} for meshing and FEM analysis. This analysis was done with the use of the additional skimage sub-packages; threshold filters and clean border segmentation to remove the surrounding grains from the image. The binary, single grain image seen below in Figure \ref{fig:Ti64single2} demonstrates that this approach is valid for application to and isolation of individual grains, as well as a multitude of grains as demonstrated in test case 3. The successful application of the 4 test cases allowed the authors to gain a high level of confidence in the algorithm and therefore move on to the next stage of the project, meshing and FE.\\
 
 \begin{figure}
   \centering
