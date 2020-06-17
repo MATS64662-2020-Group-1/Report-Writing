@@ -27,18 +27,21 @@
 
 \noindent As mentioned previously the successfulness of the second test case was assessed by comparing the calculated average grain size from the python algorithm in comparison to that previously measured using the linear intercept method. To do this, the area of each segmented grain size was measured and then the average diameter of each grain can be estimated, by assuming the grains are perfect circles. Although this is a large assumption which is clearly not true, it yielded excellent results as an average grain size of 23.5 microns was estimated, with the previously measured average of 24.9 microns. Such a small difference in average grain size clearly demonstrates the viability of this approach and provides reassurance that the algorithm should be applied to other images to further test the virtue of it.\\
 
+
+
 \begin{figure}
-\centering
-\parbox{6cm}{
-\includegraphics[width=6cm]{Sa508}
-\caption{A figure showing the initial SA508 thermally etched steel microstructure image.}
-\label{fig:2figsA}}
-\qquad
-\begin{minipage}{7cm}
-\includegraphics[width=7cm]{tescase2_binary}
-\caption{A figure showing the final steel microstructure image after segmentation and processing.}
-\label{fig:2figsB}
-\end{minipage}
+  \centering
+  \begin{minipage}[!htb]{.5\textwidth}
+    \centering\captionsetup{width=.8\linewidth}%
+    \includegraphics[width=0.6\linewidth, height=0.2\textheight]{Sa508}
+    \caption{A figure showing the initial SA508 thermally etched steel microstructure image.}\label{fig:SA508}
+  \end{minipage}%
+  \begin{minipage}[!htb]{.5\textwidth}
+    \centering\captionsetup{width=.8\linewidth}%
+    \includegraphics[width=0.7\linewidth, height=0.2\textheight]{tescase2_binary}
+    \caption{A figure showing the final steel microstructure image after segmentation and processing.}\label{fig:SA508_2}
+  \end{minipage}
+%\caption{}\label{fig:1}
 \end{figure}
 
 \noindent Test case 3 was then commenced, seeking to apply the algorithm to another image, this time a brightfield image of an $\alpha$ + $\beta$ microstructure of the Ti-6Al-4V alloy, provided by Dr Pratheek Shantraj and shown below. The same procedure as in the previous test case was applied to the image and the image was successfully converted into a segmented, binary image and then exported into the Gmsh software in order to create a square based mesh for subsequent FEM analysis.
