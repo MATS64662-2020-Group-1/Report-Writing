@@ -1,0 +1,30 @@
+\documentclass[report.tex]{subfiles}
+
+\begin{document}
+
+\section{Conclusion}
+
+\noindent This project has successfuly obtained microstructural images that have been pre-processed 
+ and imported into a simulation using available open-source FE and image-analysis packages. In terms of the image 
+ preprocessing, multiple test cases were conducted until a function which is capable of segmenting and binarising a image
+ is obtained. The function was subsequently used on sections of a globular Ti64 microstructure to be imported in the FE
+ processing package: OOF2. OOF2 is based on a set of C++ classes for finite elements and material properties, 
+ tied together in a Python infrastructure; hence, any simulation was adjusted with a few lines of Python code. 
+ To ensure OOF2 was utilised correctly and to validate results, multiple tests 
+ cases were also conducted for the FE processing side of the project. Each subsequent test case was increased in 
+ model complexity, where the final simulation involved a combination of post-processing techniques from each test case, 
+ the correct material parameters for the $\alpha$ and $\beta$ phases of Ti64, a refined FE mesh and defined boundary conditions and 
+ field equations. The results of the final simulation inclueded contour maps for the temperature distribution,
+ the displacements in the x and y directions and the stress concentrated areas in the microstructure. Although the aim of this 
+ project was achieved, the results of the simulation have not been compared to any existing simulation results and the FE
+ software package, OOF2, contains many bugs which make each simulation unreliable and unreproducible. \newline
+ 
+\noindent Further work for this project could be to compare the globular microstructure simulation results to the lamellar 
+microstructure for Ti64 and to analyse any noteable differences. An additional test case for the FE processing
+could be introduced which includes a 3D model, which could be obtained from simply extruding 2D images. This can then 
+be inputted into the FE package: OOF3D, which works in the same manner as OOF2 but in three dimensions. Although the 
+homogeneity index was high, a mixture of element types (quad and tri) could also be used in the mesh to provide a 
+more accurate representation of the microstructure. The image processing function can also be optimised through the use of
+loops and combining scripts. Finally, a software package with proven reliability and less bugs could be used to provide 
+reliable results e.g. SfePy, FiPy.
+ 
