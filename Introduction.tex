@@ -2,12 +2,8 @@
 
 \begin{document}
 \section{Introduction}
-Finite element modelling (FEM) is the process of segmenting a defined geometry by meshing, and solving coupled partial differential physics equations for individual elements within the built mesh, given inputs of boundary conditions surrounding the geometry, a series of timesteps over which the simulation runs, and materials parameters that describe how the geometry will behave under the specified conditions. The defined geometry may be a two dimensional image or a three dimensional object. For the purposes of this project, images of microstructures have been used to estimate the physical behavior of a material on the microscopic scale.
-
-Simple finite elements in Python (SfePy) uses finite element methods to solve coupled partial differential equation (PDE) in systems up to three dimensions. SfePy is a powerful software that allows complex physical problems to be coded quickly and easily. It has been used successfully in a variety of disciplines, ranging from biomechanical modelling \cite{biomedapplication} to the computational analysis of acoustic transmission coefficients \cite{AcousticTransmission}.\\ \\In this report, the input file to the SfePy software is a microstructural image which must first be 'cleaned' through segmentation, mesh generation and noise reduction. It can then be imported into the software as a mesh file, where boundary and initial conditions are applied. Fields are then created which can be used to define variables which may be 'unknown field', 'test field' or 'parameter field' \cite{FEMinSfePy} and the material properties are defined.
+Finite element modelling (FEM) is the process of segmenting a defined geometry by meshing, and solving coupled partial differential physics equations for individual elements within the built mesh, given inputs of boundary conditions surrounding the geometry, a series of timesteps over which the simulation runs, and materials parameters that describe how the geometry will behave under the specified conditions. The defined geometry may be a two dimensional image or a three dimensional object. For the purposes of this project, microstructural images have been used to estimate the physical behavior of a material on the microscopic scale. Image processing software based in python is used to prepare such images for conversion to a finite element modelling geometry input. There are a variety of different open-source finite element solvers and image processing software available for use in this task, including: sfepy, OOF2, DAMASK, sci-kit image and scipy.
 
 \section{Aims and Objectives}
-
-
 
 \end{document}
