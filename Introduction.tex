@@ -5,5 +5,19 @@
 Finite element modelling (FEM) is the process of segmenting a defined geometry by meshing, and solving coupled partial differential physics equations for individual elements within the built mesh, given inputs of boundary conditions surrounding the geometry, a series of timesteps over which the simulation runs, and materials parameters that describe how the geometry will behave under the specified conditions. The defined geometry may be a two dimensional image or a three dimensional object. For the purposes of this project, microstructural images have been used to estimate the physical behavior of a material on the microscopic scale. Image processing software based in python is used to prepare such images for conversion to a finite element modelling geometry input. There are a variety of different open-source finite element solvers and image processing software available for use in this task, including: sfepy, OOF2, DAMASK, sci-kit image and scipy.
 
 \section{Aims and Objectives}
+\subsection{Aims}
+
+
+
+\subsection{Objectives}
+
+\begin{itemize}
+  \item To pre-process several microstructural images through the use of sci-kit image and scipy by binarizing the image into two distinct phases.
+  \item To create a finite element mesh for the processed image using an adaptive algorythym.
+  \item To research materials parameters each of the respective phases present in the geometry.
+  \item To define boundary conditions, feild equations, material parameters and outputs of the simulation.
+  \item To post-process outputs of the simulation in order to extract useful results, plot, and produce conclusions based on a comparison of simulated results to that of expiremental results found in literature, with a consideration of the assumptions used to create the model.
+  \item To describe possible future work to build upon the developed workflow.
+\end{itemize}
 
 \end{document}
