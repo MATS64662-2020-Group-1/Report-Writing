@@ -56,12 +56,12 @@ A watershed transform was another image processing technique that was trialled a
   \begin{minipage}[!htb]{.5\textwidth}
     \centering\captionsetup{width=.8\linewidth}%
     \includegraphics[width=0.8\linewidth, height=0.3\textheight]{Ti64_V1.0}
-    \caption{A figure showing the initial Ti-64 microstructure image.}\label{fig:Ti64initial}
+    \caption{A figure showing the initial Ti-6Al-4V microstructure image.}\label{fig:Ti64initial}
   \end{minipage}%
   \begin{minipage}[!htb]{.5\textwidth}
     \centering\captionsetup{width=.8\linewidth}%
     \includegraphics[width=0.9\linewidth, height=0.3\textheight]{testcase 3}
-    \caption{A figure showing the final Ti-64 microstructure image after processing.}\label{fig:Ti64_2}
+    \caption{A figure showing the final Ti-6Al-4V microstructure image after processing.}\label{fig:Ti64_2}
   \end{minipage}
 %\caption{}\label{fig:1}
 \end{figure}
@@ -73,22 +73,22 @@ A watershed transform was another image processing technique that was trialled a
   \begin{minipage}[!htb]{.5\textwidth}
     \centering\captionsetup{width=.8\linewidth}%
     \includegraphics[width=0.7\linewidth, height=0.2\textheight]{testcase 4}
-    \caption{A figure showing the initial image of a single grain of the Ti-64 microstructure.}\label{fig:Ti64single}
+    \caption{A figure showing the initial image of a single grain of the Ti-6Al-4V microstructure.}\label{fig:Ti64single}
   \end{minipage}%
   \begin{minipage}[!htb]{.5\textwidth}
     \centering\captionsetup{width=.8\linewidth}%
     \includegraphics[width=0.7\linewidth, height=0.2\textheight]{tescase4_2}
-    \caption{A figure showing the final image of a single grain of Ti-64 after segmentation and processing.}\label{fig:Ti64single2}
+    \caption{A figure showing the final image of a single grain of Ti-6Al-4V after segmentation and processing.}\label{fig:Ti64single2}
   \end{minipage}
 %\caption{}\label{fig:1}
 \end{figure}
 
-\noindent Finally, the rigorously tested image processing code was compiled into a single function, to allow it to be easily applied to any image. The function termed 'process\_image' takes 5 input arguments and returns a binary image that can be inputted straight into the OOF2 program for meshing and simulations. OOF2 was used for the final function as opposed to Gmsh as during testing it became clear that it provided a more robust method for this particular application, which will be discussed further in the next section. The input arguments are as follows; file = the input image, e = exposure value, u/v are maximum and minimum threshold parameters respectively, and output = file name for the output file. The function therefore reads the input image, converts it to grayscale (if it is currently a rgb file) and then adjusts the exposure as per the input value of e. The Sobel filter is then applied using the values of u and v as the max/min markers to isolate grains and separate them from grain boundaries. Following this the watershed transform is applied to create a binary image which is then saved in the specified output file. The function permits the user to quickly change the input arguments and see the results easily, allowing comparisons to be made and the best possible output to be produced for the next step, meshing. Figure \ref{fig:FinalSim} shows an example of a Ti-64 microstructure image that was processed using the final function. This image would then go on to form the basis of the final simulations in the following section.
+\noindent Finally, the rigorously tested image processing code was compiled into a single function, to allow it to be easily applied to any image. The function termed 'process\_image' takes 5 input arguments and returns a binary image that can be inputted straight into the OOF2 program for meshing and simulations. OOF2 was used for the final function as opposed to Gmsh as during testing it became clear that it provided a more robust method for this particular application, which will be discussed further in the next section. The input arguments are as follows; file = the input image, e = exposure value, u/v are maximum and minimum threshold parameters respectively, and output = file name for the output file. The function therefore reads the input image, converts it to grayscale (if it is currently a rgb file) and then adjusts the exposure as per the input value of e. The Sobel filter is then applied using the values of u and v as the max/min markers to isolate grains and separate them from grain boundaries. Following this the watershed transform is applied to create a binary image which is then saved in the specified output file. The function permits the user to quickly change the input arguments and see the results easily, allowing comparisons to be made and the best possible output to be produced for the next step, meshing. Figure \ref{fig:FinalSim} shows an example of a Ti-6Al-4V microstructure image that was processed using the final function. This image would then go on to form the basis of the final simulations in the following section.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.8\linewidth, height=0.4\textheight]{Ti64_binary_V7.0}
-  \caption{A figure showing a processed Ti-64 microstructure image that was used for the final simulation.}
+  \caption{A figure showing a processed Ti-6Al-4V microstructure image that was used for the final simulation.}
   \label{fig:FinalSim}
 \end{figure}
 
