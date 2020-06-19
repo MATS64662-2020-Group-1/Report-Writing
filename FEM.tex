@@ -39,7 +39,7 @@ Each test case input was a binary file, where the black and white regions were s
 \\
 The results from test case 1 are shown in Figure \ref{fig:TestCase1Results} and clearly show the heat diffusion through the star shape. The properties assigned to the image, where the black region conducts the heat more effectively than the white region, can clearly be seen in the heat profile. The thermal gradient is much more steady when the heat flows through a white region compared to the longest cross-section of the black star shape, which remains at approximately 400 - 500 \degree C from point to point. These results suggest the simulation is working correctly and so, the simulation can be made more complex with the inclusion of the force field.
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{TestCase1_Simulation_Results_Corrected.png}
     \caption{Test case 1 results, showing the original input file and the heat diffusion through the star shape}
@@ -48,7 +48,7 @@ The results from test case 1 are shown in Figure \ref{fig:TestCase1Results} and 
 \\
 The simulation run for test case 2 involved the temperature and force fields in the OOF2 GUI, and the results are shown in Figure \ref{fig:TestCase2Results}. The material properties used for this simulation are similar to that of the alpha and beta regions of Ti-6Al-4V. The difference in the coefficient of thermal expansion between the regions has caused a displacement, which is clearly visible towards the right of the simulation result images, with the displacement range being higher in the y-direction by 5.03 $\mu$m. The difference between the thermal conductivity values assigned to each region is small, so the thermal gradient is relatively consistent across the grain. A more complex structure can be looked at for the next test case.
 \\
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=15cm]{TestCase2_Simulation_Results.png}
     \caption{Test case 2 results, showing the a) original microstructure of Ti-6Al-5V b) heat diffusion through the grain c) displacement in the x-direction d) displacement in y-direction}
@@ -57,7 +57,7 @@ The simulation run for test case 2 involved the temperature and force fields in 
 \\
 Test case 3 has a binary image of Ti-6Al-4V with multiple grains as the input file, to determine the impact of multiple grain boundaries on the simulation quality. The temperature and displacement contours are shown in Figure \ref{fig:TestCase3Results}. The material properties are similar between the black and white regions to simplify the simulation and ensure an output is obtained within a reasonable computational time frame. The results are as expected for a simulation with minor material property variations, with the temperature varying linearly in the x-direction and the displacement being consistent in the x- and y-directions. The inclusion of a stress contour can be examined for the next simulation, as it is clear that multiple grains can be processed in the simulation.
 \\
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=15cm]{TestCase3_Simulation_Results.png}
     \caption{Test case 3 results, showing the a) original microstructure of Ti-6Al-5V b) heat diffusion through the grains c) displacement in the x-direction d) displacement in y-direction}
@@ -68,7 +68,7 @@ Test case 4 used a binary input of a Ti-6Al-4V grain which was image processed u
 \\
 The test results have shown that the simulation is able to process binary images with multiple grains to produce contour plots of temperature distribution, displacement along x and y, and stress distribution. This means that the FEM is capable of running the final simulation to gain information about the heat diffusion through a multi-grain Ti-6Al-4V image and the results can be trusted.
 \\
-\begin{figure}[htp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=15cm]{TestCase4_Simulation_Results.png}
     \caption{Test case 4 results, showing the a) original microstructure of Ti-6Al-5V b) heat diffusion through the grain c) stress within the grain d) displacement in the x-direction e) displacement in y-direction}
